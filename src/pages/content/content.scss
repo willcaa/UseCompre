@@ -1,0 +1,30 @@
+page-content {
+    .toolbar-background {
+        background-color: #fbb22f !important;
+    }
+    
+    .toolbar{
+        text-align: -webkit-center;
+    }
+    .content-md{
+        background-image: url(../assets/img/cadastrar2.jpg);
+        background-repeat: round;
+    }
+
+    .list-md{
+        margin-top: 150px;
+        text-align: center;
+        color: #726969;
+    }
+
+    .button-md{
+        background-color: rgba(50,50,50,0.2);
+        height: 45px;
+        width: 240px;
+        color: #4766af;
+        border-radius: 5px;
+    }
+    h3{
+        padding: 0px 25px;
+    }
+}

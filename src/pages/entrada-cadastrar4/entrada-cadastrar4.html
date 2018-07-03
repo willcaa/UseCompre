@@ -1,0 +1,107 @@
+<ion-header>
+
+    <ion-navbar color="dark">
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+  
+      <ion-title>
+        <img src="assets/img/logo-top.png" style="width: 30%;" alt="">
+      </ion-title>
+  
+      <ion-buttons end>
+        <button ion-button icon-only (click)="openModal()">
+          <ion-icon name="contact"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+  
+  </ion-header>
+
+<ion-content padding>
+  <div class="fixed content" style="margin-top: 56px;"></div>
+  <div class="scroll-content" style="margin-top: 56px;">
+    
+    <h2 style="text-align: center">Do que você precisa?</h2>
+  
+  <h6 style="text-align: center">Vamos encontrar o profissional ideal</h6>
+  
+  <ion-item>
+      <ion-select [(ngModel)]="categoriaProfissional" placeholder="Escolha uma categoria">
+        <ion-option value="A">A</ion-option>
+        <ion-option value="B">B</ion-option>
+        <ion-option value="C">C</ion-option>
+        <ion-option Value="D">D</ion-option>
+      </ion-select>  
+    </ion-item>
+    <br>
+  <ion-item>
+    <ion-select [(ngModel)]="subCategoriaProfissional" placeholder="Escolha uma sub-categoria">
+      <ion-option value="A">A</ion-option>
+      <ion-option value="B">B</ion-option>
+      <ion-option value="C">C</ion-option>
+      <ion-option Value="D">D</ion-option>
+    </ion-select>
+  </ion-item>
+  <br>     
+  <ion-item>    
+    <ion-input type="text" placeholder="Nome do serviço" [(ngModel)]="nomeServico"></ion-input>
+  </ion-item>  
+    
+  <h6 style="text-align: center">Orçamento sugerido</h6>
+    <ion-item>
+      <ion-select [(ngModel)]="orcamento" placeholder="Orçamento">
+      <ion-option value="A">
+        A
+      </ion-option>
+      <ion-option value="B">
+        B
+      </ion-option>
+      <ion-option value="C">
+        C
+      </ion-option>
+      <ion-option value="D">
+        D
+      </ion-option>
+      </ion-select>
+    </ion-item>
+    <button ion-button icon-start color="light" style="-webkit-box-align: center">
+      <ion-icon name="attach" style="color: black"></ion-icon>
+      Anexar foto
+    </button>
+  
+  <h6 style="text-align: center">Como deseja pagar?</h6>
+    <ion-item>
+      <ion-select [(ngModel)]="tipoPagamento" placeholder="Como deseja pagar?">
+      <ion-option value="Horas de Trabalho">Horas de trabalho</ion-option>
+      <ion-option value="Trabalho Finalizado">Trabalho finalizado</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <h6 style="text-align: center">Disponibilidade</h6>
+    <ion-item>
+    <ion-select [(ngModel)]="disponibilidade" placeholder="Disponibilidade">
+      <ion-option value="Período Integral">Período integral</ion-option>
+      <ion-option value="Meio período">Meio período</ion-option>
+    </ion-select>
+  </ion-item>
+  <br>
+  <button ion-button color="light" style="left: 80px; border: solid 1px grey; width: 50%" (click)="goPage('ConvidarProfissionalPage')">
+    Próxima Etapa
+  </button> 
+  </div>
+    
+</ion-content>
+<ion-footer>
+  <div class="btnTabs">
+    <button ion-button class="btnft" name="notificações" icon-only>
+        <ion-icon name="notifications"></ion-icon>
+      </button>
+      <button ion-button class="btnft" name="mensagens" icon-only>
+        <ion-icon name="chatboxes"></ion-icon>
+      </button>
+      <button ion-button class="btnft" name="projetos">
+        <ion-icon name="hammer"></ion-icon>
+    </button>
+  </div>
+</ion-footer>

@@ -1,0 +1,50 @@
+<ion-header>
+
+  <ion-navbar color="dark">
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>
+      <img src="assets/img/logo-top.png" style="width: 30%;" alt="">
+    </ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openModal()">
+        <ion-icon name="contact"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+
+    <form (submit)="doSignup()">
+
+      <ion-item>
+        <ion-input type="text" name="nome" placeholder="Nome"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input type="email" name="email" placeholder="E-Mail"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input type="password" name="senha" placeholder="Senha"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-input type="select" name="senha" placeholder="País"></ion-input>
+      </ion-item>
+
+      <div padding>
+        <button ion-button color="primary" block>Login</button>
+      </div>
+
+    </form>
+
+  </ion-list>
+</ion-content>

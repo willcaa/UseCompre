@@ -1,0 +1,75 @@
+page-convidar-profissional {
+    .imgworker{
+        border-radius: 100% !important;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        max-width: 100px;
+        max-height: 100px;
+    }
+    .profissional{
+        margin-top: 50px;
+
+        text-align: center;
+    }
+    .icon {
+        margin-top: -20px;
+    }
+    .name{
+        margin-left: 10px;
+        margin-top: -1px;
+    }
+    .icon-star{
+        margin-top: 5px;
+        width: 5px;
+    }
+    .btn-star{
+        background-color: transparent !important;
+        width: 0px !important;
+        height: 25px;
+        box-shadow: none;
+        padding-left: 1px;
+        font-size: 15px;
+        margin: 0;
+    }
+    .col{
+        padding: 0px;
+    }
+    .toolbar{
+        text-align: -webkit-center;
+    }
+    .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default{
+        color: #fff;
+    }
+    .toolbar-background-md{
+        background: #fbb22f !important;
+    }
+    .button-footer{
+        width: 31% !important;
+    }
+    .footer{
+        background-color: navy !important;
+    }
+    .icon-md{
+         color: white;
+     }
+     .button-md-light{
+        background-color: #fff0;
+        width: 100%;
+        box-shadow: none;
+    }
+    .icon-button-footer{
+        margin-top: 0px !important;
+    }
+    .scroll-content {
+
+        background-color: lightgrey;
+        margin-top: 60  px !important;
+    }
+    .concluido{
+        margin-top: 0px;
+    }
+    .name{
+        margin-bottom: 0px;
+    }
+}

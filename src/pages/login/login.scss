@@ -1,0 +1,58 @@
+page-login {
+    .toolbar-background {
+        background-color: #fbb22f !important;
+    }
+    .toolbar{
+        text-align: -webkit-center;
+    }
+    .content-md{
+        background-image: url(../assets/img/cadastrar1bg.jpg) !important;
+        background-repeat: round;
+    }
+    form, input, optgroup, select{
+        margin-top: 60%;
+        padding: 0px 19%;
+    }
+
+    .item-block{
+        border-radius: 6px;
+        height: 35px;
+        min-height: 35px;
+        margin-bottom: 5px;
+        background: rgba(255, 255, 255, 0.5);
+        color: #fff;
+    }
+
+    .item-md.item-block .item-inner{
+        border: none;
+    }
+
+    .item-md.item-block .item-inner{
+        border: none;
+    }
+    .item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner, .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner{
+        border: none;
+    }
+
+    .item-md.item-block .item-inner{
+        border: none;
+    }
+    
+    .button-block-md{
+        background: rgba(255,255,255, 0);
+        border-radius: 6px;
+        color: #fff;
+        border: solid 1px;
+    }
+    .button-md{
+        padding-right: 5px;
+        width: 100%;
+        border-radius: 5px;
+    }
+    .button-face{
+        background-color: #3b5897 !important;
+    }
+   .button-facebook{
+    font-size: 34px;
+   }
+}

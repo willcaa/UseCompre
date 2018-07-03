@@ -1,0 +1,145 @@
+<ion-header>
+
+    <ion-navbar color="dark">
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+  
+      <ion-title>
+        <img src="assets/img/logo-top.png" style="width: 30%;" alt="">
+      </ion-title>
+  
+      <ion-buttons end>
+        <button ion-button icon-only (click)="openModal()">
+          <ion-icon name="contact"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+  
+  </ion-header>
+
+
+
+<ion-content padding>
+  <div id="profissional" *ngIf="pageId == 'profissional'">
+      <h2 style="text-align: center">CONVIDE UM PROFISSIONAL</h2>
+    <ion-row>
+      <ion-col class="profissional" *ngFor="let item of workers" id="profissional">  
+          <button ion-button [style.background-image]="getBackground(item.img)" style="height: 100px;" class="imgworker" (click)="goPerfilProfissional(item.id)"></button>
+          <div class="icon"><img src="/assets/imgs/hue.png" style="width: 20px; height: 10px; margin-right: 100px"></div>
+          <ion-label class="name">{{item.nome}}</ion-label>
+          <ion-row>
+              <ion-col>
+                <button ion-button class="btn-star">
+                  <ion-icon *ngIf="item.estrelas >= 1" class="icon-star" name="md-star" style="color: yellow !important"></ion-icon>
+                  <ion-icon *ngIf="item.estrelas < 1" class="icon-star" name="md-star"></ion-icon>
+                </button>
+                <button ion-button class="btn-star">
+                  <ion-icon *ngIf="item.estrelas >= 2" class="icon-star" name="md-star" style="color: yellow !important"></ion-icon>
+                  <ion-icon *ngIf="item.estrelas < 2" class="icon-star" name="md-star"></ion-icon>
+                </button>
+                <button ion-button class="btn-star">
+                  <ion-icon *ngIf="item.estrelas >= 3" class="icon-star" name="md-star" style="color: yellow !important"></ion-icon>
+                  <ion-icon *ngIf="item.estrelas < 3" class="icon-star" name="md-star"></ion-icon>
+                </button>
+                <button ion-button class="btn-star">
+                  <ion-icon *ngIf="item.estrelas >= 4" class="icon-star" name="md-star" style="color: yellow !important"></ion-icon>
+                  <ion-icon *ngIf="item.estrelas < 4" class="icon-star" name="md-star"></ion-icon>
+                </button>
+                <button ion-button class="btn-star">
+                  <ion-icon *ngIf="item.estrelas >= 5" class="icon-star" name="md-star" style="color: yellow !important"></ion-icon>
+                  <ion-icon *ngIf="item.estrelas < 5" class="icon-star" name="md-star"></ion-icon>
+                </button>
+              </ion-col>
+          </ion-row>
+    
+          <ion-label class="concluido" stacked color="grey">{{item.trabalhos_concluidos}} concluídos</ion-label>
+          <button ion-button color="light" style="border: solid 1px grey; width: 25%; border-radius: 12%;" (click)="getWorkerId(item.id)">CONVIDAR</button>
+      </ion-col>
+    </ion-row>
+  
+    <button ion-button name="pular" class="pular" color="light" style="border: 1px solid grey">PULAR ETAPA</button>
+    <button ion-button name="publicar" class="publicar" color="light" style="border: 1px solid grey" (click)="publicar()">PUBLICAR</button>
+  </div>
+
+
+  <div class="pagetabs" id="publicacao" *ngIf="pageId == 'publicacao'">
+    <h5>Publicação</h5>
+    <ion-list>
+      <ion-item *ngIf="nomeServico">
+        <ion-label>Nome do serviço:</ion-label>
+        <div item-content class="itemContent">
+          {{nomeServico}}
+        </div>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item *ngIf="categoriaProfissional">
+        <ion-label>Categoria:</ion-label>
+        <div item-content class="itemContent">
+          {{categoriaProfissional}}
+        </div>
+      </ion-item>
+      <ion-item *ngIf="subCategoriaProfissional">
+        <ion-label>Subcategoria</ion-label>
+        <div item-content class="itemContent">
+          {{subCategoriaProfissional}}
+        </div>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item *ngIf="orcamento">
+        <ion-label>Orçamento:</ion-label>
+        <div item-content class="itemContent">
+          {{orcamento}}
+        </div>
+      </ion-item>
+      <ion-item *ngIf="tipoPagamento">
+        <ion-label>Tipo de pagamento:</ion-label>
+        <div item-content class="itemContent">
+          {{tipoPagamento}}
+        </div>
+      </ion-item>
+      <ion-item *ngIf="disponibilidade">
+        <ion-label>Disponibilidade:</ion-label>
+        <div item-content class="itemContent">
+          {{disponibilidade}}
+        </div>
+      </ion-item>
+    </ion-list>
+    <ion-list *ngIf="prof">
+      <h5>Profissional escolhido:</h5>
+      <ion-item>
+        <ion-label>Nome do profissional:</ion-label>
+        <div item-content class="itemContent">
+          {{prof.nome}}
+        </div>
+      </ion-item>
+      <ion-item>
+        <ion-label>Trabalhos concluídos:</ion-label>
+        <div item-content class="itemContent">
+          {{prof.trabalhos_concluidos}}
+        </div>
+      </ion-item>
+      <ion-item>
+        <ion-label>Classificação:</ion-label>
+        <div item-content class="itemContent">
+          {{prof.estrelas}} estrelas
+        </div>
+      </ion-item>
+    </ion-list>
+    
+  </div>
+  
+</ion-content>
+<ion-footer class="footer" style="text-align: center;">
+    <button ion-button name="notificações" color="light" icon-only class="button-footer">
+        <ion-icon name="notifications" class="icon-button-footer"></ion-icon>
+      </button>
+      <button ion-button name="mensagens" color="light" icon-only class="button-footer">
+        <ion-icon name="chatboxes" class="icon-button-footer"></ion-icon>
+      </button>
+      <button ion-button name="projetos" color = "light" icon-only class="button-footer">
+        <ion-icon name="hammer" class="icon-button-footer"></ion-icon>
+    </button>
+</ion-footer>

@@ -1,0 +1,32 @@
+page-signup {
+    .toolbar-background {
+        background-color: #fbb22f !important;
+    }
+    
+    .toolbar{
+        text-align: -webkit-center;
+    }
+
+    .content-md{
+        background-image: linear-gradient(#384670, #5266ab);
+    }
+    .scroll-content{
+        margin-top: 170px !important;
+        padding-right: 20%;
+        padding-left: 20%;
+    }
+    .item-md{
+        background: none;
+        border: solid 1px #fff;
+        border-radius: 10px;
+        height: 35px;
+        margin-bottom: 10px;
+        min-height: 35px;
+        color: #fff;
+    }
+
+    .button-md-primary{
+        background-color: rgba(0,0,0,0.3) !important;
+        border-radius: 10px;
+    }
+}

@@ -1,0 +1,56 @@
+page-entrada-cadastrar4 {
+    .toolbar-background {
+        background-color: #fbb22f !important;
+    }
+    .toolbar{
+        text-align: -webkit-center;
+    }
+    .select-md{
+        max-width: 100%;
+        width: 100%;
+        background-color: transparent;
+    }
+    .item-md{
+        background-color: transparent;
+    }
+
+    .scroll-content {
+        padding: 16px 60px !important;
+        background-color: lightgrey;
+        margin-top: 40px !important;
+    }
+    .button-md-light{
+        background-color: #fff0;
+        width: 100%;
+        box-shadow: none;
+    }
+    .content-md{
+        color: #817f7c;
+        background-color: #e0dfdd;
+    }
+    .item-md{
+        background-color: #fff0;
+        border: solid 1px #454545;
+        border-radius: 10px;
+        height: 35px;
+        margin-top: 10px;
+        min-height: 0px;
+    }
+    .btnft{
+        margin: 0px !important;
+        border-radius: 2px;
+        overflow: hidden;
+        height: 60px;
+        width: 25%;
+        font-size: 1.8rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #fff;
+        background-color: #fff0;
+        border: none;
+        box-shadow: none;
+    }
+    .btnTabs{
+        text-align: center;
+    }
+}
