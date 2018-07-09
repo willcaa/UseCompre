@@ -18,6 +18,11 @@ export class PerfilProfissionalPage {
   pageId: any;
   descricao: any;
   concluidos: any;
+  buttonColor:any;
+  buttonColor2:any;
+  buttonColor3:any;
+  buttonColor4:any;
+  isso:any;
   constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http) {
     this.profId = this.navParams.get("id");
   }
@@ -57,4 +62,67 @@ export class PerfilProfissionalPage {
         }
       });
   }
+   goPage(page){
+    this.navCtrl.push(page, {
+      
+    });
+    
+  }
+//   btnArray = 
+// [
+//     {
+//         "title":"Btn1",
+//         "backgroudColor":"#ff00ff"
+//     },
+//     {
+//         "title":"Btn2",
+//         "backgroudColor":"#ff00ff"
+//     },
+//     {
+//         "title":"Btn3",
+//         "backgroudColor":"#ff00ff"
+//     }
+// ]
+// btnActivate(ind)
+// {
+//     this.btnArray[ind]['backgroudColor'] = "#000";
+// }
+addEvent(){
+  this.buttonColor = '#000'; 
+  this.buttonColor2 = '#fff';
+  this.buttonColor3 = '#fff';
+  this.buttonColor4 = '#fff';
+ 
+  }
+Event2(){
+  this.buttonColor = '#fff'; 
+  this.buttonColor2 = '#000';
+  this.buttonColor3 = '#fff';
+  this.buttonColor4 = '#fff'; 
+  
+ 
+  }
+Event3(){
+  this.buttonColor = '#fff'; 
+  this.buttonColor2 = '#fff';
+  this.buttonColor3 = '#000';
+  this.buttonColor4 = '#fff'; 
+  
+ 
+  }
+Event4(){
+  this.buttonColor = '#fff'; 
+  this.buttonColor2 = '#fff';
+  this.buttonColor3 = '#fff';
+  this.buttonColor4 = '#000'; 
+  
+ 
+  }
+
+alterar(){
+  this.isso = 'none'; 
+  
+ 
+  }
+ 
 }

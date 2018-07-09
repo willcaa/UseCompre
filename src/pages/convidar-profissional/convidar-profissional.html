@@ -21,45 +21,49 @@
 
 
 <ion-content padding>
-  <div id="profissional" *ngIf="pageId == 'profissional'">
+  <div style="margin-bottom: 20px;">
+  <div id="profissional" *ngIf="pageId == 'profissional'" >
       <h2 style="text-align: center">CONVIDE UM PROFISSIONAL</h2>
     <ion-row>
-      <ion-col class="profissional" *ngFor="let item of workers" id="profissional">  
-          <button ion-button [style.background-image]="getBackground(item.img)" style="height: 100px;" class="imgworker" (click)="goPerfilProfissional(item.id)"></button>
-          <div class="icon"><img src="/assets/imgs/hue.png" style="width: 20px; height: 10px; margin-right: 100px"></div>
+      <ion-col col-4 class="profissional" *ngFor="let item of workers" id="profissional">  
+          <button ion-button [style.background-image]="getBackground(item.img)" style=" filter: grayscale(100%);height: 100px; margin-bottom: 15px;" class="imgworker" (click)="goPerfilProfissional(item.id)"></button>
+          <div class="icon"><img src="/assets/imgs/hue.png" style="width: 19px; height: 14px; margin-right: 63px;"></div>
           <ion-label class="name">{{item.nome}}</ion-label>
           <ion-row>
               <ion-col>
                 <button ion-button class="btn-star">
-                  <ion-icon *ngIf="item.estrelas >= 1" class="icon-star" name="md-star" style="color: yellow !important"></ion-icon>
-                  <ion-icon *ngIf="item.estrelas < 1" class="icon-star" name="md-star"></ion-icon>
+                  <ion-icon *ngIf="item.estrelas >= 1" class="icon-star" name="md-star" style="color: #e8b03e"></ion-icon>
+                  <ion-icon *ngIf="item.estrelas < 1" class="icon-star" name="ios-star-outline" style="color: #a9a8a7;"></ion-icon>
                 </button>
                 <button ion-button class="btn-star">
-                  <ion-icon *ngIf="item.estrelas >= 2" class="icon-star" name="md-star" style="color: yellow !important"></ion-icon>
-                  <ion-icon *ngIf="item.estrelas < 2" class="icon-star" name="md-star"></ion-icon>
+                  <ion-icon *ngIf="item.estrelas >= 2" class="icon-star" name="md-star" style="color: #e8b03e"></ion-icon>
+                  <ion-icon *ngIf="item.estrelas < 2" class="icon-star" name="ios-star-outline" style="color: #a9a8a7;"></ion-icon>
                 </button>
                 <button ion-button class="btn-star">
-                  <ion-icon *ngIf="item.estrelas >= 3" class="icon-star" name="md-star" style="color: yellow !important"></ion-icon>
-                  <ion-icon *ngIf="item.estrelas < 3" class="icon-star" name="md-star"></ion-icon>
+                  <ion-icon *ngIf="item.estrelas >= 3" class="icon-star" name="md-star" style="color: #e8b03e"></ion-icon>
+                  <ion-icon *ngIf="item.estrelas < 3" class="icon-star" name="ios-star-outline" style="color: #a9a8a7;"></ion-icon>
                 </button>
                 <button ion-button class="btn-star">
-                  <ion-icon *ngIf="item.estrelas >= 4" class="icon-star" name="md-star" style="color: yellow !important"></ion-icon>
-                  <ion-icon *ngIf="item.estrelas < 4" class="icon-star" name="md-star"></ion-icon>
+                  <ion-icon *ngIf="item.estrelas >= 4" class="icon-star" name="md-star" style="color: #e8b03e"></ion-icon>
+                  <ion-icon *ngIf="item.estrelas < 4" class="icon-star" name="ios-star-outline" style="color: #a9a8a7;"></ion-icon>
                 </button>
                 <button ion-button class="btn-star">
-                  <ion-icon *ngIf="item.estrelas >= 5" class="icon-star" name="md-star" style="color: yellow !important"></ion-icon>
-                  <ion-icon *ngIf="item.estrelas < 5" class="icon-star" name="md-star"></ion-icon>
+                  <ion-icon *ngIf="item.estrelas >= 5" class="icon-star" name="md-star" style="color: #e8b03e"></ion-icon>
+                  <ion-icon *ngIf="item.estrelas < 5" class="icon-star" name="ios-star-outline" style="color: #a9a8a7;"></ion-icon>
                 </button>
               </ion-col>
           </ion-row>
     
-          <ion-label class="concluido" stacked color="grey">{{item.trabalhos_concluidos}} concluídos</ion-label>
-          <button ion-button color="light" style="border: solid 1px grey; width: 25%; border-radius: 12%;" (click)="getWorkerId(item.id)">CONVIDAR</button>
+          <ion-label class="concluido" stacked color="grey" style="margin-top: 6px;">{{item.trabalhos_concluidos}} concluídos</ion-label>
+          <button ion-button color="light" class="convida" style="width: 74%; color: #96928b; border-color: #141f40;" (click)="getWorkerId(item.id)">CONVIDAR</button>
       </ion-col>
-    </ion-row>
   
-    <button ion-button name="pular" class="pular" color="light" style="border: 1px solid grey">PULAR ETAPA</button>
-    <button ion-button name="publicar" class="publicar" color="light" style="border: 1px solid grey" (click)="publicar()">PUBLICAR</button>
+    </ion-row>
+    <br>
+    <br>
+    
+    <button ion-button name="pular" class="pular" color="light" style="border: 1px solid #141f40; color: #141f40; width: 160px; margin-left: 87px;">PULAR ETAPA</button>
+    <button ion-button name="publicar" class="publicar" color="light" style="border: 1px solid #141f40; color: #141f40; width: 160px; margin-left: 87px;" (click)="publicar()">PUBLICAR</button>
   </div>
 
 
@@ -116,13 +120,13 @@
         </div>
       </ion-item>
       <ion-item>
-        <ion-label>Trabalhos concluídos:</ion-label>
+        <ion-label  >Trabalhos concluídos:</ion-label>
         <div item-content class="itemContent">
           {{prof.trabalhos_concluidos}}
         </div>
       </ion-item>
       <ion-item>
-        <ion-label>Classificação:</ion-label>
+        <ion-label >Classificação:</ion-label>
         <div item-content class="itemContent">
           {{prof.estrelas}} estrelas
         </div>
@@ -130,16 +134,27 @@
     </ion-list>
     
   </div>
-  
+  </div>
 </ion-content>
-<ion-footer class="footer" style="text-align: center;">
-    <button ion-button name="notificações" color="light" icon-only class="button-footer">
-        <ion-icon name="notifications" class="icon-button-footer"></ion-icon>
+<ion-footer class="footer" style="text-align: center;height: 70px; background: linear-gradient(#394772, #5064a7);">
+  <div style="display: inline-table;">
+    <button ion-button name="notificações" color="light" icon-only class="button-footer" style="top: 5px; min-width: 4.9em;">
+        <img src="/assets/imgs/sino.png" style="max-width: 40%;">
+        
       </button>
-      <button ion-button name="mensagens" color="light" icon-only class="button-footer">
-        <ion-icon name="chatboxes" class="icon-button-footer"></ion-icon>
+    <h6 style="margin-top: 3px;font-size: 11px;color: #fff;font-weight: 50;">NOTIFICAÇÃO</h6>
+  </div>
+  <div style="display: inline-table; ">
+      <button ion-button name="mensagens" color="light" icon-only class="button-footer" style="top: 3px; min-width: 7.9em;">
+        <img src="/assets/imgs/chat.png" style="max-width: 35%;">
       </button>
-      <button ion-button name="projetos" color = "light" icon-only class="button-footer">
-        <ion-icon name="hammer" class="icon-button-footer"></ion-icon>
+    <h6 style="margin-top: 3px;font-size: 11px;color: #fff;font-weight: 50;">MENSAGEN</h6>
+  </div>
+  <div style="display: inline-table;">
+      <button ion-button name="projetos" color = "light" icon-only class="button-footer" style="top: 3px; min-width: 4.9em;">
+          <img src="/assets/imgs/chapeuzinho.png" style="max-width: 51%;">
     </button>
+    <h6 style="margin-top: 3px;font-size: 11px;color: #fff;font-weight: 50;">PROJETO</h6>
+  </div>
+
 </ion-footer>

@@ -4,8 +4,14 @@ page-convidar-profissional {
         width: 100%;
         background-repeat: no-repeat;
         background-size: cover;
-        max-width: 100px;
-        max-height: 100px;
+        max-width: 90px;
+        max-height: 90px;
+    }
+    .convida{
+        border: solid 1px 
+      grey; width: 25%; 
+        border-radius: 12%;
+        width: 74%;
     }
     .profissional{
         margin-top: 50px;
@@ -45,14 +51,19 @@ page-convidar-profissional {
         background: #fbb22f !important;
     }
     .button-footer{
-        width: 31% !important;
+        width: 44% !important;
     }
     .footer{
-        background-color: navy !important;
+        background: linear-gradient(#394772,#5064a7 );
     }
     .icon-md{
          color: white;
      }
+    h6{
+        font-size: 11px;
+        color: white;
+        font-weight: 300;
+    }
      .button-md-light{
         background-color: #fff0;
         width: 100%;

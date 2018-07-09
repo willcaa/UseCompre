@@ -51,7 +51,7 @@ export class LoginPage {
     })
     .catch(e => console.log(e));
   }
-
+  
   cadastrar(email, nome, imagem) {
     let toast = this.toastCtrl.create({
       message: "3",
@@ -137,7 +137,30 @@ export class LoginPage {
       .then( res => this.isLoggedIn = false)
       .catch(e => console.log('Error logout from Facebook', e));
   }
-
+  loginemail(email,senha){
+      let headerx = new Headers();
+      headerx.append('Access-Control-Allow-Origin', '*');
+      headerx.append('Accept', 'application/json');
+      headerx.append('content-type', 'application/json');
+      var myData = JSON.stringify({email: email, senha: senha});
+      var link = 'https://bluedropsproducts.com/use/usuarios/login';
+  
+      this.http.post(link, myData, { headers: headerx })
+        .map(res => res.json())
+        .subscribe(data => {
+          console.log(data);
+          if ( data ) {
+            this.storage.set('email', data.usuario.email);
+            this.storage.set('senha', data.usuario.senha);
+            this.storage.set('meuid', data.usuario.id);
+            this.storage.get('meuid').then((val) => {
+              console.log('Id', val);
+              this.navCtrl.push(ContentPage);
+            });
+          }
+        });
+      }
+        
 
   getUserDetail(userid) {
     let toast = this.toastCtrl.create({

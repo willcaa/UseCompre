@@ -1,34 +1,51 @@
-<!--
-  Generated template for the EntradaCadastrar3Page page.
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title></ion-title>
+  <ion-navbar color="dark">
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"style="color: #282828;"></ion-icon>
+    </button>
+
+    <ion-title>
+      <img src="assets/img/logo-top.png" style="width: 30%;" alt="">
+    </ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openModal()">
+        <ion-icon name="contact"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
-  <h5>Do que você precisa?</h5>
+<br>
+<br>
+<br>
+<br>
+  <h5 style="font-weight: 400;">Do que você precisa?</h5>
 
   
-  <ion-select [(ngModel)]="categoria" placeholder="Escolha uma categoria">
-    <ion-option>
-
-    </ion-option>
-  </ion-select>
+  <ion-item>
+    <ion-select [(ngModel)]="categoriaProfissional" placeholder="Escolha uma categoria">
+      <ion-option value="A">A</ion-option>
+      <ion-option value="B">B</ion-option>
+      <ion-option value="C">C</ion-option>
+      <ion-option Value="D">D</ion-option>
+    </ion-select>  
+  </ion-item>
+  <ion-item>
+    <ion-select [(ngModel)]="categoriaProfissional" placeholder="Escolha uma categoria">
+      <ion-option value="A">A</ion-option>
+      <ion-option value="B">B</ion-option>
+      <ion-option value="C">C</ion-option>
+      <ion-option Value="D">D</ion-option>
+    </ion-select>  
+  </ion-item>
   
-  <ion-select [(ngModel)]="subcategoria" placeholder="Escolha uma Subcategoria">
-    <ion-option>
 
-     </ion-option>
-  </ion-select>
  
 
 </ion-content>

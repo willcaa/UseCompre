@@ -71,12 +71,14 @@
     </button>
   
   <h6 style="text-align: center">Como deseja pagar?</h6>
-    <ion-item>
-      <ion-select [(ngModel)]="tipoPagamento" placeholder="Como deseja pagar?">
-      <ion-option value="Horas de Trabalho">Horas de trabalho</ion-option>
-      <ion-option value="Trabalho Finalizado">Trabalho finalizado</ion-option>
-    </ion-select>
-  </ion-item>
+  <div>  
+  <ion-item>
+        <ion-select [(ngModel)]="tipoPagamento" placeholder="Como deseja pagar?">
+        <ion-option value="Horas de Trabalho">Horas de trabalho</ion-option>
+        <ion-option value="Trabalho Finalizado">Trabalho finalizado</ion-option>
+      </ion-select>
+    </ion-item>
+  </div> 
 
   <h6 style="text-align: center">Disponibilidade</h6>
     <ion-item>
@@ -86,22 +88,31 @@
     </ion-select>
   </ion-item>
   <br>
-  <button ion-button color="light" style="left: 80px; border: solid 1px grey; width: 50%" (click)="goPage('ConvidarProfissionalPage')">
+  <button ion-button color="light" style="left: 58px; border: solid 1px grey; width: 50%" (click)="goPage('ConvidarProfissionalPage')">
     Próxima Etapa
   </button> 
   </div>
     
 </ion-content>
-<ion-footer>
-  <div class="btnTabs">
-    <button ion-button class="btnft" name="notificações" icon-only>
-        <ion-icon name="notifications"></ion-icon>
+<ion-footer class="footer" style="text-align: center;height: 70px; background: linear-gradient(#394772, #5064a7);">
+    <div style="display: inline-table;">
+      <button ion-button name="notificações" color="light" icon-only class="button-footer" style="top: 5px; min-width: 4.9em;">
+          <img src="/assets/imgs/sino.png" style="max-width: 40%;">
+          
+        </button>
+      <h6 style="margin-top: 3px;font-size: 11px;color: #fff;font-weight: 50;">NOTIFICAÇÃO</h6>
+    </div>
+    <div style="display: inline-table; ">
+        <button ion-button name="mensagens" color="light" icon-only class="button-footer" style="top: 3px; min-width: 7.9em;">
+          <img src="/assets/imgs/chat.png" style="max-width: 35%;">
+        </button>
+      <h6 style="margin-top: 3px;font-size: 11px;color: #fff;font-weight: 50;">MENSAGEN</h6>
+    </div>
+    <div style="display: inline-table;">
+        <button ion-button name="projetos" color = "light" icon-only class="button-footer" style="top: 3px; min-width: 4.9em;">
+            <img src="/assets/imgs/chapeuzinho.png" style="max-width: 51%;">
       </button>
-      <button ion-button class="btnft" name="mensagens" icon-only>
-        <ion-icon name="chatboxes"></ion-icon>
-      </button>
-      <button ion-button class="btnft" name="projetos">
-        <ion-icon name="hammer"></ion-icon>
-    </button>
-  </div>
-</ion-footer>
+      <h6 style="margin-top: 3px;font-size: 11px;color: #fff;font-weight: 50;">PROJETO</h6>
+    </div>
+  
+  </ion-footer>

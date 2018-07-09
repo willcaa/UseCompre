@@ -4,6 +4,7 @@ import { Http, Headers } from '@angular/http';
 import { DomSanitizer, SafeResourceUrl, SafeUrl } from '@angular/platform-browser';
 import { PerfilProfissionalPage } from '../perfil-profissional/perfil-profissional';
 import { Storage } from '@ionic/storage';
+import { AlertController } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -22,7 +23,8 @@ export class ConvidarProfissionalPage {
   workerId: any;
   pageId = "profissional";
   prof: any;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http,  private _sanitizer: DomSanitizer, private storage: Storage) {
+  
+  constructor(public alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams, public http: Http,  private _sanitizer: DomSanitizer, private storage: Storage) {
     this.categoriaProfissional = this.navParams.get("categoriaProfissional");
     this.subCategoriaProfissional = this.navParams.get("subCategoriaProfissional");
     this.nomeServico = this.navParams.get("nomeServico");
@@ -35,7 +37,7 @@ export class ConvidarProfissionalPage {
       this.userId= val;
     });
   }
-
+  
   log(valor){
     console.log(valor);
   }
@@ -103,8 +105,19 @@ export class ConvidarProfissionalPage {
   }
 
   publicar(){
-    this.getProfissional(this.workerId);  
-    this.alterarTab('publicacao');
+    if(this.workerId){
+      this.getProfissional(this.workerId);  
+      this.alterarTab('publicacao');
+    }
+    else{ 
+      let alert = this.alertCtrl.create({
+        title: 'Trabalhador não selecionado',
+        subTitle: 'Selecione um trabalhador para continuar',
+        buttons: ['Ok']
+      });
+      alert.present();
+
+    }
   }
 
 }
