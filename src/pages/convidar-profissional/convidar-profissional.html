@@ -55,7 +55,7 @@
           </ion-row>
     
           <ion-label class="concluido" stacked color="grey" style="margin-top: 6px;">{{item.trabalhos_concluidos}} concluídos</ion-label>
-          <button ion-button color="light" class="convida" style="width: 74%; color: #96928b; border-color: #141f40;" (click)="getWorkerId(item.id)">CONVIDAR</button>
+          <button ion-button color="light" class="convida" style="width: 74%; color: #96928b; border-color: #141f40;" (click)="getProfissional(item.id);getWorkerId(item.id)">CONVIDAR</button>
       </ion-col>
   
     </ion-row>
@@ -63,7 +63,7 @@
     <br>
     
     <button ion-button name="pular" class="pular" color="light" style="border: 1px solid #141f40; color: #141f40; width: 160px; margin-left: 87px;">PULAR ETAPA</button>
-    <button ion-button name="publicar" class="publicar" color="light" style="border: 1px solid #141f40; color: #141f40; width: 160px; margin-left: 87px;" (click)="publicar()">PUBLICAR</button>
+    <button ion-button name="publicar" class="publicar" color="light" style="border: 1px solid #141f40; color: #141f40; width: 160px; margin-left: 87px;" (click)="publicar(categoriaProfissional,subCategoriaProfissional,nomeServico,orcamento,tipoPagamento,disponibilidade)">PUBLICAR</button>
   </div>
 
 

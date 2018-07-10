@@ -65,7 +65,11 @@
       </ion-option>
       </ion-select>
     </ion-item>
-    <button ion-button icon-start color="light" style="-webkit-box-align: center">
+    
+      <!-- <input type="file" value="Anexar foto" (change)="atualizaImagem($event)" [(ngModel)]="imagem"/> -->
+    
+    
+    <button ion-button icon-start color="light" type="file" style="-webkit-box-align: center" (click)="getFoto()">
       <ion-icon name="attach" style="color: black"></ion-icon>
       Anexar foto
     </button>
@@ -88,7 +92,7 @@
     </ion-select>
   </ion-item>
   <br>
-  <button ion-button color="light" style="left: 58px; border: solid 1px grey; width: 50%" (click)="goPage('ConvidarProfissionalPage')">
+  <button ion-button color="light" style="left: 58px; border: solid 1px grey; width: 50%" (click)="goPage('ConvidarProfissionalPage')" >
     Próxima Etapa
   </button> 
   </div>

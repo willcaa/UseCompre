@@ -103,8 +103,40 @@ export class ConvidarProfissionalPage {
         }
       });
   }
-
-  publicar(){
+  publicar(categoriaProfissional,subCategoriaProfissional,nomeServico,orcamento,tipoPagamento,disponibilidade){
+   console.log(this.prof.id);
+    let headers = new Headers();
+    headers.append('Access-Control-Allow-Origin', '*');
+    headers.append('Accept', 'application/json');
+    headers.append('content-type', 'application/json');
+    
+    let body = {
+      categoriaProfissional : categoriaProfissional,
+      subCategoriaProfissional : subCategoriaProfissional,
+      nomeServico : nomeServico,
+      orcamento : orcamento ,
+      tipoPagamento : tipoPagamento,
+      disponibilidade : disponibilidade,
+      idTrabalhador : this.prof.id,
+    }
+  
+    let link = 'https://bluedropsproducts.com/use/usuarios/publicar';
+  
+    this.http.post(link, JSON.stringify(body), { headers: headers })
+    .map(res => res.json())
+    .subscribe(data => {
+      if(data){
+        this.storage.set('categoriaProfissional', data.categoriaProfissional);
+        this.storage.set('subCategoriaProfissional', data.subCategoriaProfissional);
+        this.storage.set('nomeServico', data.nomeServico);
+        this.storage.set('orcamento', data.orcamento);
+        this.storage.set('tipoPagamento', data.tipoPagamento);
+        this.storage.set('disponibilidade', data.disponibilidade);
+      }
+      console.log(data);
+    });
+  
+  
     if(this.workerId){
       this.getProfissional(this.workerId);  
       this.alterarTab('publicacao');
@@ -119,5 +151,22 @@ export class ConvidarProfissionalPage {
 
     }
   }
+  // publicar(){
+  //   if(this.workerId){
+  //     this.getProfissional(this.workerId);  
+  //     this.alterarTab('publicacao');
+  //   }
+  //   else{ 
+  //     let alert = this.alertCtrl.create({
+  //       title: 'Trabalhador não selecionado',
+  //       subTitle: 'Selecione um trabalhador para continuar',
+  //       buttons: ['Ok']
+  //     });
+  //     alert.present();
+
+  //   }
+  // }
+  
+  
 
 }
