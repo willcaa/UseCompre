@@ -118,6 +118,7 @@ export class ConvidarProfissionalPage {
       tipoPagamento : tipoPagamento,
       disponibilidade : disponibilidade,
       idTrabalhador : this.prof.id,
+      idEmissor : this.userId,
     }
   
     let link = 'https://bluedropsproducts.com/use/usuarios/publicar';
@@ -150,6 +151,17 @@ export class ConvidarProfissionalPage {
       alert.present();
 
     }
+    
+  }
+  public goPage(page){
+    console.log(page);
+    this.navCtrl.push(page, {
+      
+    });
+    
+  }
+  public idcapacete(){
+    
   }
   // publicar(){
   //   if(this.workerId){

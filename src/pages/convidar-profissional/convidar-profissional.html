@@ -62,7 +62,7 @@
     <br>
     <br>
     
-    <button ion-button name="pular" class="pular" color="light" style="border: 1px solid #141f40; color: #141f40; width: 160px; margin-left: 87px;">PULAR ETAPA</button>
+    <button ion-button name="pular" class="pular" color="light" (click)="goPage('ProjetosPage')" style="border: 1px solid #141f40; color: #141f40; width: 160px; margin-left: 87px;">PULAR ETAPA</button>
     <button ion-button name="publicar" class="publicar" color="light" style="border: 1px solid #141f40; color: #141f40; width: 160px; margin-left: 87px;" (click)="publicar(categoriaProfissional,subCategoriaProfissional,nomeServico,orcamento,tipoPagamento,disponibilidade)">PUBLICAR</button>
   </div>
 
@@ -151,10 +151,10 @@
     <h6 style="margin-top: 3px;font-size: 11px;color: #fff;font-weight: 50;">MENSAGEN</h6>
   </div>
   <div style="display: inline-table;">
-      <button ion-button name="projetos" color = "light" icon-only class="button-footer" style="top: 3px; min-width: 4.9em;">
+      <button ion-button name="projetos" color = "light" icon-only class="button-footer" style="top: 3px; min-width: 4.9em;" (click)="goPage('ProjetosPage');idcapacete" >
           <img src="/assets/imgs/chapeuzinho.png" style="max-width: 51%;">
     </button>
-    <h6 style="margin-top: 3px;font-size: 11px;color: #fff;font-weight: 50;">PROJETO</h6>
+    <h6 style="margin-top: 3px;font-size: 11px;color: #fff;font-weight: 50;" >PROJETO</h6>
   </div>
 
 </ion-footer>

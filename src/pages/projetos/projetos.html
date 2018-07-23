@@ -1,0 +1,63 @@
+<!--
+  Generated template for the ProjetosPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="dark">
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>
+      <img src="assets/img/logo-top.png" style="width: 30%;" alt="">
+    </ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openModal()">
+        <ion-icon name="contact"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+      <ion-item>
+          <ion-avatar item-start>
+            <div style="width: 75px; height: 75px; background-size: contain; border-radius: 100%;"></div>
+          </ion-avatar>
+          <h2 style="margin-bottom: 7px;">item.nomeServico</h2>
+          <p style="margin-bottom: 15px;">nome profissional</p>
+          <button class="editar" style="margin-right: 20px;">Editar</button>
+          <button class="exclui">Excluir</button>
+          <h5 style="margin-top: 5px;">nome profissional</h5>
+        </ion-item>
+  </ion-list>
+</ion-content>
+<ion-footer class="footer" style="text-align: center;height: 70px; background: linear-gradient(#394772, #5064a7);">
+  <div style="display: inline-table;">
+    <button ion-button name="notificações" color="light" icon-only class="button-footer" style="top: 5px; min-width: 4.9em;">
+        <img src="/assets/imgs/sino.png" style="max-width: 40%;">
+        
+      </button>
+    <h6 style="margin-top: 3px;font-size: 11px;color: #fff;font-weight: 50;">NOTIFICAÇÃO</h6>
+  </div>
+  <div style="display: inline-table; ">
+      <button ion-button name="mensagens" color="light" icon-only class="button-footer" style="top: 3px; min-width: 7.9em;">
+        <img src="/assets/imgs/chat.png" style="max-width: 35%;">
+      </button>
+    <h6 style="margin-top: 3px;font-size: 11px;color: #fff;font-weight: 50;">MENSAGEN</h6>
+  </div>
+  <div style="display: inline-table;">
+      <button ion-button name="projetos" color = "light" icon-only class="button-footer" style="top: 3px; min-width: 4.9em;" >
+          <img src="/assets/imgs/chapeuzinhov.png" style="max-width: 51%;">
+    </button>
+    <h6 style="margin-top: 3px;font-size: 11px;color: #90ff3c;font-weight: 50;" >PROJETO</h6>
+  </div>
+
+</ion-footer>

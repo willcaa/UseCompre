@@ -10,6 +10,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { PerfilProfissionalPage } from '../pages/perfil-profissional/perfil-profissional';
+// import { ProjetosPage } from '../pages/projetos/projetos';
 
 import { Items } from '../mocks/providers/items';
 import { Settings, User, Api } from '../providers';

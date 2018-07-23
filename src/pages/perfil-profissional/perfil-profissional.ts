@@ -4,6 +4,7 @@ import { Http, Headers } from '@angular/http';
 
 
 
+
 @IonicPage()
 @Component({
   selector: 'page-perfil-profissional',
@@ -63,9 +64,7 @@ export class PerfilProfissionalPage {
       });
   }
    goPage(page){
-    this.navCtrl.push(page, {
-      
-    });
+    this.navCtrl.push(page);
     
   }
 //   btnArray = 
