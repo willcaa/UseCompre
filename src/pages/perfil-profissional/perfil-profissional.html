@@ -22,7 +22,7 @@
   
   <ion-content padding>
     <div class="perfil" style="background: linear-gradient(#394772, #5064a7); width: 100%;">
-        <button ion-button class="" style="margin-left: 12px; box-shadow: none; background: #fff0;"(click)="goPage('ConvidarProfissionalPage')">
+        <button ion-button class="" style="margin-left: 12px; box-shadow: none; background-color: transparent;"(click)="goPage('ConvidarProfissionalPage')">
             <img src="assets/imgs/seta.png" style="width: 14px;"alt="">
           </button>
       <br>
@@ -175,16 +175,16 @@
       
       
             <ion-row>
-              <button ion-button name="perfil" color="light" class="btn" (click)="alterarTab('perfil')" (click)="alterar()" (click)="addEvent();" [ngStyle]="{'color': buttonColor}" id="p" style="margin-left: 45px;" >Perfil</button>
+              <button ion-button name="perfil" color="light" class="btn" (click)="alterarTab('perfil')" (click)="alterar()" (click)="addEvent();" [ngStyle]="{'color': buttonColor}" id="p" style="margin-left: 45px; background-color: transparent;" >Perfil</button>
             </ion-row>
             <ion-row>
-              <button ion-button name="especialidade" color="light" class="btn"  (click)="alterarTab('especialidade')" id="e" (click)="alterar()" (click)="Event2();" [ngStyle]="{'color': buttonColor2}">Especialidade</button>
+              <button ion-button name="especialidade" style="background-color: transparent;" color="light" class="btn"  (click)="alterarTab('especialidade')" id="e" (click)="alterar()" (click)="Event2();" [ngStyle]="{'color': buttonColor2} ">Especialidade</button>
             </ion-row>
             <ion-row>
-              <button ion-button name="extras" color="light" class="btn"style="left: -5px;" id="c" (click)="alterarTab('Concluidos')" (click)="alterar()" (click)="Event3();" [ngStyle]="{'color': buttonColor3}">Concluidos</button>
+              <button ion-button name="extras" color="light" class="btn"style="left: -5px; background-color: transparent;" id="c" (click)="alterarTab('Concluidos')" (click)="alterar()" (click)="Event3();" [ngStyle]="{'color': buttonColor3}">Concluidos</button>
             </ion-row>
             <ion-row>
-              <button ion-button name="contatar" color="light" class="btn" style="left: 0px;" id="co" (click)="alterarTab('contatar')" (click)="alterar()" (click)="Event4();" [ngStyle]="{'color': buttonColor4}">Contatar</button>
+              <button ion-button name="contatar" color="light" class="btn" style="left: 0px; background-color: transparent;" id="co" (click)="alterarTab('contatar')" (click)="alterar()" (click)="Event4();" [ngStyle]="{'color': buttonColor4}">Contatar</button>
             </ion-row>
             <img src="assets/imgs/profissional.png" style="margin-top: -95px; height: 197px; margin-left: 95px;" >
     </div>
@@ -278,20 +278,20 @@
   
   <ion-footer class="footer" style="text-align: center;height: 70px; background: linear-gradient(#394772, #5064a7);">
     <div style="display: inline-table;">
-      <button ion-button name="notificações" color="light" icon-only class="button-footer" style="top: 5px; min-width: 4.9em;">
+      <button ion-button name="notificações" color="light" icon-only class="button-footer" style="top: 5px; min-width: 4.9em; background-color: transparent;">
           <img src="assets/imgs/sino.png" style="max-width: 40%;">
           
         </button>
       <h6 style="margin-top: 3px;font-size: 11px;color: #fff;font-weight: 50;">NOTIFICAÇÃO</h6>
     </div>
     <div style="display: inline-table; ">
-        <button ion-button name="mensagens" color="light" icon-only class="button-footer" style="top: 3px; min-width: 7.9em;">
+        <button ion-button name="mensagens" color="light" icon-only class="button-footer" style="top: 3px; min-width: 7.9em; background-color: transparent;">
           <img src="assets/imgs/chat.png" style="max-width: 35%;">
         </button>
       <h6 style="margin-top: 3px;font-size: 11px;color: #fff;font-weight: 50;">MENSAGEM</h6>
     </div>
     <div style="display: inline-table;">
-        <button ion-button name="projetos" color = "light" icon-only class="button-footer" style="top: 3px; min-width: 4.9em;">
+        <button ion-button name="projetos" color = "light" icon-only class="button-footer" style="top: 3px; min-width: 4.9em; background-color: transparent;">
             <img src="assets/imgs/chapeuzinho.png" style="max-width: 51%;">
       </button>
       <h6 style="margin-top: 3px;font-size: 11px;color: #fff;font-weight: 50;">PROJETO</h6>

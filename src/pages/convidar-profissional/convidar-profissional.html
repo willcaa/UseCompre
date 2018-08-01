@@ -54,8 +54,8 @@
               </ion-col>
           </ion-row>
     
-          <ion-label class="concluido" stacked color="grey" style="margin-top: 6px;">{{item.trabalhos_concluidos}} concluídos</ion-label>
-          <button ion-button color="light" class="convida" style="width: 74%; color: #96928b; border-color: #141f40;" (click)="getProfissional(item.id);getWorkerId(item.id)">CONVIDAR</button>
+          <ion-label class="concluido" stacked color="grey" style="margin-top: 6px; background-color: transparent;">{{item.trabalhos_concluidos}} concluídos</ion-label>
+          <button ion-button color="light" class="convida" style="width: 74%; color: #96928b; border-color: #141f40; " (click)="getProfissional(item.id);getWorkerId(item.id)">CONVIDAR</button>
       </ion-col>
   
     </ion-row>
@@ -138,20 +138,20 @@
 </ion-content>
 <ion-footer class="footer" style="text-align: center;height: 70px; background: linear-gradient(#394772, #5064a7);">
   <div style="display: inline-table;">
-    <button ion-button name="notificações" color="light" icon-only class="button-footer" style="top: 5px; min-width: 4.9em;">
-        <img src="assets/imgs/sino.png" style="max-width: 40%;">
+    <button ion-button name="notificações" color="light" icon-only class="button-footer" style="top: 5px; min-width: 4.9em; background-color: transparent;">
+        <img src="assets/imgs/sino.png" style="max-width: 40%; background-color: transparent;">
         
       </button>
     <h6 style="margin-top: 3px;font-size: 11px;color: #fff;font-weight: 50;">NOTIFICAÇÃO</h6>
   </div>
   <div style="display: inline-table; ">
-      <button ion-button name="mensagens" color="light" icon-only class="button-footer" style="top: 3px; min-width: 7.9em;">
+      <button ion-button name="mensagens" color="light" icon-only class="button-footer" style="top: 3px; min-width: 7.9em; background-color: transparent;">
         <img src="assets/imgs/chat.png" style="max-width: 35%;">
       </button>
     <h6 style="margin-top: 3px;font-size: 11px;color: #fff;font-weight: 50;">MENSAGEM</h6>
   </div>
   <div style="display: inline-table;">
-      <button ion-button name="projetos" color = "light" icon-only class="button-footer" style="top: 3px; min-width: 4.9em;" (click)="goPage('ProjetosPage');idcapacete" >
+      <button ion-button name="projetos" color = "light" icon-only class="button-footer" style="top: 3px; min-width: 4.9em; background-color: transparent;" (click)="goPage('ProjetosPage');idcapacete" >
           <img src="assets/imgs/chapeuzinho.png" style="max-width: 51%;">
     </button>
     <h6 style="margin-top: 3px;font-size: 11px;color: #fff;font-weight: 50;" >PROJETO</h6>
