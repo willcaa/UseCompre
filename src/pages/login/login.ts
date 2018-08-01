@@ -98,6 +98,38 @@ export class LoginPage {
     
   }
 
+  public cadastrarEmail(email, nome, senha) {
+   
+    let headerx = new Headers();
+    headerx.append('Access-Control-Allow-Origin', '*');
+    headerx.append('Accept', 'application/json');
+    headerx.append('content-type', 'application/json');
+    var myData = JSON.stringify({email: email, nome: nome, senha: senha});
+    var link = 'https://wa-studio.com/use/usuarios/cadastrarEmail';
+
+    this.http.post(link, myData, { headers: headerx })
+      .map(res => res.json())
+      .subscribe(data => {
+        console.log(data.id);
+        if ( data ) {
+          this.storage.set('nome', data.nome);
+          this.storage.set('email', data.email);
+          this.storage.set('imagem', data.user_image);
+          this.storage.set('meuid', data.id);
+          this.storage.get('meuid').then((val) => {
+            console.log('Id', val);
+            this.loginId = val;
+          });
+           
+          console.log("logado");
+          this.navCtrl.push('ContentPage');
+            
+        };
+        console.log(data);
+      });
+  
+}
+
 
   login() {
     let toasts = this.toastCtrl.create({

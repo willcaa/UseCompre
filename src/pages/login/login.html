@@ -4,16 +4,9 @@
     <button ion-button icon-only menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-
     <ion-title>
       <img src="assets/img/logo-top.png" style="width: 30%;" alt="">
     </ion-title>
-
-    <ion-buttons end>
-      <button ion-button icon-only (click)="openModal()">
-        <ion-icon name="contact"></ion-icon>
-      </button>
-    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
@@ -70,10 +63,13 @@
     </a> -->
 
 
-    <div class="pagetabs" id="cadastrar" *ngIf="tabId == 'cadastrar'" style="margin-top: 60%;">
+    <div class="pagetabs" id="cadastrar" *ngIf="tabId == 'cadastrar'" style="margin-top: 50%;">
       <ion-list>
         <ion-item style=" border-radius: 6px; background: rgba(255, 255, 255, 0.5); color: #fff;">
           <ion-input type="text" [(ngModel)]="email" placeholder="E-mail"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text" [(ngModel)]="nome" placeholder="Nome completo"></ion-input>
         </ion-item>
         <ion-item>
           <ion-input type="password" [(ngModel)]="password" placeholder="Senha"></ion-input>
@@ -84,10 +80,10 @@
       </ion-list>
 
       <ion-segment>
-        <ion-segment-button (click)="alterarTab('entrar')">
+        <ion-segment-button (click)="alterarTab('entrar')" style="color: #fbb22f">
           Voltar
         </ion-segment-button>
-        <ion-segment-button *ngIf="password == password2 && password != null && password2 != null">
+        <ion-segment-button style="color: #fbb22f" *ngIf="password == password2 && password != null && password2 != null" (click)="cadastrarEmail(email, nome, password)">
           Cadastrar
         </ion-segment-button>
       </ion-segment>
