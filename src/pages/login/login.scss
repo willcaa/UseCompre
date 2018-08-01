@@ -8,6 +8,11 @@ page-login {
     .content-md{
         background-image: url(../assets/img/cadastrar1bg.jpg) !important;
         background-repeat: round;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+
     }
     form, input, optgroup, select{
         margin-top: 60%;

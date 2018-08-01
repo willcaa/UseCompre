@@ -1,3 +1,12 @@
 page-cards {
-
+    page-perfil-profissional .btn{
+        background-color: #fff0 !important;
+        width: 100%;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    
+    }
+    .button-md-light:hover:not(.disable-hover){
+        background-color: #fff0;
+    }
 }

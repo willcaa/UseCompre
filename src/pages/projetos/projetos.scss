@@ -141,5 +141,8 @@ page-projetos {
         height: 75px;
 
     }
-
+    .button-md-light:hover:not(.disable-hover){
+    background-color: #f4f4f400;
+    box-shadow: none;
+    }
 }
