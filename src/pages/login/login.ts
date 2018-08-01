@@ -22,6 +22,7 @@ export class LoginPage {
   start: string;
   data:any = {};
   loginId: number;
+  tabId: string = 'entrar';
     // The account fields for the login form.
   // If you're using the username field with or without email, make
   // sure to add it to the type
@@ -52,21 +53,21 @@ export class LoginPage {
     .catch(e => console.log(e));
   }
   
+  async clearStorage(){
+    this.storage.clear();
+    this.storage.get('meuid').then((val)=>{
+      console.log(val);
+    })
+  }
+
+ public alterarTab(id: string){
+    this.tabId= id;
+    console.log(this.tabId);
+  }
+
+
   cadastrar(email, nome, imagem) {
-    let toast = this.toastCtrl.create({
-      message: "3",
-      duration: 3000,
-      position: 'top'
-    });
-    toast.present();
-    this.storage.get('meuid').then((val) => {
-      console.log('Id', val);
-      this.loginId = val;
-    });
-    if(this.loginId) {
-      this.navCtrl.push('ContentPage');
-      console.log("logado");
-    } else {
+   
       let headerx = new Headers();
       headerx.append('Access-Control-Allow-Origin', '*');
       headerx.append('Accept', 'application/json');
@@ -94,7 +95,7 @@ export class LoginPage {
           };
           console.log(data);
         });
-    }
+    
   }
 
 
