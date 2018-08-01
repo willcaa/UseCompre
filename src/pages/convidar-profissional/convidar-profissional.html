@@ -27,7 +27,7 @@
     <ion-row>
       <ion-col col-4 class="profissional" *ngFor="let item of workers" id="profissional">  
           <button ion-button [style.background-image]="getBackground(item.img)" style=" filter: grayscale(100%);height: 100px; margin-bottom: 15px;" class="imgworker" (click)="goPerfilProfissional(item.id)"></button>
-          <div class="icon"><img src="/assets/imgs/hue.png" style="width: 19px; height: 14px; margin-right: 63px;"></div>
+          <div class="icon"><img src="assets/imgs/hue.png" style="width: 19px; height: 14px; margin-right: 63px;"></div>
           <ion-label class="name">{{item.nome}}</ion-label>
           <ion-row>
               <ion-col>
@@ -139,20 +139,20 @@
 <ion-footer class="footer" style="text-align: center;height: 70px; background: linear-gradient(#394772, #5064a7);">
   <div style="display: inline-table;">
     <button ion-button name="notificações" color="light" icon-only class="button-footer" style="top: 5px; min-width: 4.9em;">
-        <img src="/assets/imgs/sino.png" style="max-width: 40%;">
+        <img src="assets/imgs/sino.png" style="max-width: 40%;">
         
       </button>
     <h6 style="margin-top: 3px;font-size: 11px;color: #fff;font-weight: 50;">NOTIFICAÇÃO</h6>
   </div>
   <div style="display: inline-table; ">
       <button ion-button name="mensagens" color="light" icon-only class="button-footer" style="top: 3px; min-width: 7.9em;">
-        <img src="/assets/imgs/chat.png" style="max-width: 35%;">
+        <img src="assets/imgs/chat.png" style="max-width: 35%;">
       </button>
-    <h6 style="margin-top: 3px;font-size: 11px;color: #fff;font-weight: 50;">MENSAGEN</h6>
+    <h6 style="margin-top: 3px;font-size: 11px;color: #fff;font-weight: 50;">MENSAGEM</h6>
   </div>
   <div style="display: inline-table;">
       <button ion-button name="projetos" color = "light" icon-only class="button-footer" style="top: 3px; min-width: 4.9em;" (click)="goPage('ProjetosPage');idcapacete" >
-          <img src="/assets/imgs/chapeuzinho.png" style="max-width: 51%;">
+          <img src="assets/imgs/chapeuzinho.png" style="max-width: 51%;">
     </button>
     <h6 style="margin-top: 3px;font-size: 11px;color: #fff;font-weight: 50;" >PROJETO</h6>
   </div>
