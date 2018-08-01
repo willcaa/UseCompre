@@ -180,4 +180,8 @@ page-perfil-profissional {
         margin-left: 30px;
         color:#000;
     }
+    .button-md-light:hover:not(.disable-hover){
+        background-color: #f4f4f400;
+        box-shadow: none;
+    }
 }
