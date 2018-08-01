@@ -56,7 +56,7 @@ export class ConvidarProfissionalPage {
       data: true
     }
 
-    let link = 'https://bluedropsproducts.com/use/usuarios/getWorkers';
+    let link = 'https://wa-studio.com/use/usuarios/getWorkers';
     
     this.http.post(link, JSON.stringify(body), { headers: headers })
       .map(res => res.json())
@@ -92,7 +92,7 @@ export class ConvidarProfissionalPage {
       id: id
     }
 
-    let link = 'https://bluedropsproducts.com/use/usuarios/getProfissional';
+    let link = 'https://wa-studio.com/use/usuarios/getProfissional';
     
     this.http.post(link, JSON.stringify(body), { headers: headers })
       .map(res => res.json())
@@ -121,7 +121,7 @@ export class ConvidarProfissionalPage {
       idEmissor : this.userId,
     }
   
-    let link = 'https://bluedropsproducts.com/use/usuarios/publicar';
+    let link = 'https://wa-studio.com/use/usuarios/publicar';
   
     this.http.post(link, JSON.stringify(body), { headers: headers })
     .map(res => res.json())

@@ -22,13 +22,13 @@
   
   <ion-content padding>
     <div class="perfil" style="background: linear-gradient(#394772, #5064a7); width: 100%;">
-        <button ion-button class="" style="margin-left: 12px; box-shadow: none; background: #fff0;">
-            <ion-icon class="" name="ios-arrow-back" (click)="goPage('ConvidarProfissionalPage')"></ion-icon>
+        <button ion-button class="" style="margin-left: 12px; box-shadow: none; background: #fff0;"(click)="goPage('ConvidarProfissionalPage')">
+            <img src="/assets/imgs/seta.png" style="width: 14px;"alt="">
           </button>
       <br>
       <br>
-      <div class="info-perfil" id="info-perfil" style="float: left; width: 220px;">
-        <img src="{{imagemProfissional}}" style="border-radius:100%; margin-left: 33px;filter: grayscale(100%);">
+      <div class="info-perfil" id="info-perfil" style="float: left; width: 220px; margin-top: -28px;">
+        <img src="{{imagemProfissional}}" style="border-radius:100%; margin-left: 33px;filter: grayscale(100%); width: 145px; border: solid 2px; border-color: #6b6b6b;">
         <ion-row *ngIf="estrelas == 0">
             <ion-col col-9 style="left: 39px; top: 6px;">
               <button ion-button class="btn-star">
@@ -36,19 +36,19 @@
               </button>
             
                 <button ion-button class="btn-star" style="left: -11px;">
-                  <ion-icon class="icon-star" name="ios-star-outline"></ion-icon>
+                  <ion-icon class="icon-star" name="ios-star-outline" style="background-image: url(/assets/imgs/estrela.png); background-size: 20px; background-repeat: no-repeat; top: 6px;"></ion-icon>
                 </button>
            
                   <button ion-button class="btn-star">
-                    <ion-icon class="icon-star" name="ios-star-outline" style="left: -22px;"></ion-icon>
+                    <ion-icon class="icon-star" name="ios-star-outline" style="left: -22px; background-image: url(/assets/imgs/estrela.png); background-size: 20px; background-repeat: no-repeat; top: 6px;"></ion-icon>
                   </button>
                 
                     <button ion-button class="btn-star">
-                      <ion-icon class="icon-star" name="ios-star-outline" style="left: -33px;"></ion-icon>
+                      <ion-icon class="icon-star" name="ios-star-outline" style="left: -33px; background-image: url(/assets/imgs/estrela.png); background-size: 20px; background-repeat: no-repeat; top: 6px;"></ion-icon>
                     </button>
                  
                       <button ion-button class="btn-star">
-                        <ion-icon class="icon-star" name="ios-star-outline" style="left: -44px;"></ion-icon>
+                        <ion-icon class="icon-star" name="ios-star-outline" style="left: -44px;background-image: url(/assets/imgs/estrela.png); background-size: 20px; background-repeat: no-repeat; top: 6px;"></ion-icon>
                      </button>
             </ion-col>
           </ion-row>
@@ -56,121 +56,117 @@
     
           <ion-row *ngIf="estrelas == 1">
               <ion-col col-9 style="margin-left: 55px;">
-                <button ion-button class="btn-star">
-                  <ion-icon class="icon-star" name="md-star" style="color: #e8b03e"></ion-icon>
+                <button ion-button class="btn-star"style="background-image: url(/assets/imgs/estrelamarela.png); background-size: 20px; background-repeat: no-repeat; top: 6px;">
                 </button>
            
-                  <button ion-button class="btn-star" style="left: -11px;">
-                    <ion-icon class="icon-star" name="ios-star-outline"></ion-icon>
+                  <button ion-button class="btn-star" style="left: -11px; background-image: url(/assets/imgs/estrela.png); background-size: 20px; background-repeat: no-repeat; top: 6px;">
+                    
                   </button>
                
-                    <button ion-button class="btn-star" style="left: -22px;">
-                      <ion-icon class="icon-star" name="ios-star-outline"></ion-icon>
+                    <button ion-button class="btn-star" style="left: -22px; background-image: url(/assets/imgs/estrela.png); background-size: 20px; background-repeat: no-repeat; top: 6px;">
+                      
                     </button>
                
-                      <button ion-button class="btn-star" style="left: -33px;">
-                        <ion-icon class="icon-star" name="ios-star-outline"></ion-icon>
+                      <button ion-button class="btn-star" style="left: -33px; background-image: url(/assets/imgs/estrela.png); background-size: 20px; background-repeat: no-repeat; top: 6px;">
+                        
                       </button>
            
-                        <button ion-button class="btn-star" style="left: -44px;">
-                          <ion-icon class="icon-star" name="ios-star-outline"></ion-icon>
+                        <button ion-button class="btn-star" style="left: -44px;background-image: url(/assets/imgs/estrela.png); background-size: 20px; background-repeat: no-repeat; top: 6px;">
+                          
                         </button>
                       </ion-col>
           </ion-row>
     
           <ion-row *ngIf="estrelas == 2">
-              <ion-col col-9 style="margin-left: 55px;">
-                <button ion-button class="btn-star">
-                  <ion-icon class="icon-star" name="md-star"  style="color: #e8b03e"></ion-icon>
+              <ion-col col-9 style="margin-left: 55px; top: 12px;">
+                <button ion-button class="btn-star" style="background-image: url(/assets/imgs/estrelamarela.png); background-size: 20px; background-repeat: no-repeat; top: 6px;">
+                  
                 </button>
           
-                  <button ion-button class="btn-star" style="left: -11px;">
-                    <ion-icon class="icon-star" name="md-star" style="color: #e8b03e"></ion-icon>
+                  <button ion-button class="btn-star" style="left: -11px; background-image: url(/assets/imgs/estrelamarela.png); background-size: 20px; background-repeat: no-repeat; top: 6px;">
+                   
                   </button>
                 
-                    <button ion-button class="btn-star" style="left: -22px;">
-                      <ion-icon class="icon-star" name="ios-star-outline"></ion-icon>
+                    <button ion-button class="btn-star" style="left: -20px;background-image: url(/assets/imgs/estrela.png); background-size: 20px; background-repeat: no-repeat; top: 6px;">
+                      
                     </button>
                  
-                      <button ion-button class="btn-star" style="left: -33px;">
-                        <ion-icon class="icon-star" name="ios-star-outline"></ion-icon>
+                      <button ion-button class="btn-star" style="left: -25px;background-image: url(/assets/imgs/estrela.png); background-size: 20px; background-repeat: no-repeat; top: 6px;">
+                        
                       </button>
                  
-                        <button ion-button class="btn-star" style="left: -44px;">
-                          <ion-icon class="icon-star" name="ios-star-outline"></ion-icon>
+                        <button ion-button class="btn-star" style="left: -30px; background-image: url(/assets/imgs/estrela.png); background-size: 20px; background-repeat: no-repeat; top: 6px;">
+                          
                         </button>
                       </ion-col>
           </ion-row>
     
           <ion-row *ngIf="estrelas == 3">
               <ion-col col-9 style="margin-left: 55px;">
-                <button ion-button class="btn-star">
-                  <ion-icon class="icon-star" name="md-star" style="color: #e8b03e"></ion-icon>
+                <button ion-button class="btn-star" style="background-image: url(/assets/imgs/estrelamarela.png); background-size: 20px; background-repeat: no-repeat; top: 6px;">
+                 
                 </button>
              
-                  <button ion-button class="btn-star" style="left: -11px;">
-                    <ion-icon class="icon-star" name="md-star" style="color: #e8b03e"></ion-icon>
+                  <button ion-button class="btn-star" style="left: -11px;background-image: url(/assets/imgs/estrelamarela.png); background-size: 20px; background-repeat: no-repeat; top: 6px;">
+                    
                   </button>
          
-                    <button ion-button class="btn-star" style="left: -22px;">
-                      <ion-icon class="icon-star" name="md-star" style="color: #e8b03e"></ion-icon>
+                    <button ion-button class="btn-star" style="left: -22px; background-image: url(/assets/imgs/estrelamarela.png); background-size: 20px; background-repeat: no-repeat; top: 6px;">
+                      
                     </button>
                   
-                      <button ion-button class="btn-star" style="left: -33px;">
-                        <ion-icon class="icon-star" name="ios-star-outline"></ion-icon>
+                      <button ion-button class="btn-star" style="left: -33px;background-image: url(/assets/imgs/estrela.png); background-size: 20px; background-repeat: no-repeat; top: 6px;">
+                        
                       </button>
                  
-                        <button ion-button class="btn-star" style="left: -44px;">
-                          <ion-icon class="icon-star" name="ios-star-outline"></ion-icon>
+                        <button ion-button class="btn-star" style="left: -44px;background-image: url(/assets/imgs/estrela.png); background-size: 20px; background-repeat: no-repeat; top: 6px;">
+                         
                         </button>
                       </ion-col>
           </ion-row>
     
           <ion-row *ngIf="estrelas == 4">
               <ion-col col-9 style="margin-left: 55px;">
-                <button ion-button class="btn-star">
-                  <ion-icon class="icon-star" name="md-star" style="color: #e8b03e"></ion-icon>
+                <button ion-button class="btn-star" style="background-image: url(/assets/imgs/estrelamarela.png); background-size: 20px; background-repeat: no-repeat; top: 6px;">
+                  
                 </button>
               
-                  <button ion-button class="btn-star" style="left: -11px;">
-                    <ion-icon class="icon-star" name="md-star" style="color: #e8b03e"></ion-icon>
+                  <button ion-button class="btn-star" style="left: -11px;background-image: url(/assets/imgs/estrelamarela.png); background-size: 20px; background-repeat: no-repeat; top: 6px;">
+                    
                   </button>
                
-                    <button ion-button class="btn-star" style="left: -22px;">
-                      <ion-icon class="icon-star" name="md-star" style="color: #e8b03e"></ion-icon>
+                    <button ion-button class="btn-star" style="left: -22px;background-image: url(/assets/imgs/estrelamarela.png); background-size: 20px; background-repeat: no-repeat; top: 6px;">
+                      
                     </button>
                 
-                      <button ion-button class="btn-star" style="left: -33px;">
-                        <ion-icon class="icon-star" name="md-star" style="color: #e8b03e"></ion-icon>
+                      <button ion-button class="btn-star" style="left: -33px; background-image: url(/assets/imgs/estrelamarela.png); background-size: 20px; background-repeat: no-repeat; top: 6px;">
+                        
                       </button>
                   
-                        <button ion-button class="btn-star" style="left: -44px;">
-                          <ion-icon class="icon-star" name="ios-star-outline"></ion-icon>
+                        <button ion-button class="btn-star" style="left: -38px;background-image: url(/assets/imgs/estrela.png); background-size: 20px; background-repeat: no-repeat; top: 6px;">
+                          
                         </button>
                       </ion-col>
           </ion-row>
     
           <ion-row *ngIf="estrelas == 5">
               <ion-col col-9 style="margin-left: 55px;">
-                <button ion-button class="btn-star">
-                  <ion-icon class="icon-star" name="md-star" style="color: #e8b03e"></ion-icon>
+                <button ion-button class="btn-star" style="left: -11px; background-image: url(/assets/imgs/estrelamarela.png); background-size: 20px; background-repeat: no-repeat; top: 6px;">
                 </button>
               
               
-                  <button ion-button class="btn-star" style="left: -11px;">
-                    <ion-icon class="icon-star" name="md-star" style="color: #e8b03e"></ion-icon>
+                  <button ion-button class="btn-star" style="left: -11px; background-image: url(/assets/imgs/estrelamarela.png); background-size: 20px; background-repeat: no-repeat; top: 6px;">
                   </button>         
-                    <button ion-button class="btn-star" style="left: -22px;">
-                      <ion-icon class="icon-star" name="md-star" style="color: #e8b03e"></ion-icon>
+                    <button ion-button class="btn-star" style="left: -22px;background-image: url(/assets/imgs/estrelamarela.png); background-size: 20px; background-repeat: no-repeat; top: 6px;">
+                      
                     </button>
                  
                   
-                      <button ion-button class="btn-star" style="left: -33px;">
-                        <ion-icon class="icon-star" name="md-star" style="color: #e8b03e"></ion-icon>
+                      <button ion-button class="btn-star" style="left: -33px;background-image: url(/assets/imgs/estrelamarela.png); background-size: 20px; background-repeat: no-repeat; top: 6px;">
                       </button>
                    
                     
-                        <button ion-button class="btn-star" style="left: -44px;">
+                        <button ion-button class="btn-star" style="left: -44px; background-image: url(/assets/imgs/estrelamarela.png); background-size: 20px; background-repeat: no-repeat; top: 6px;">
                           <ion-icon class="icon-star" name="md-star" style="color: #e8b03e"></ion-icon>
                         </button>
                       </ion-col>
@@ -179,7 +175,7 @@
       
       
             <ion-row>
-              <button ion-button name="perfil" color="light" class="btn" (click)="alterarTab('perfil')" (click)="alterar()" (click)="addEvent();" [ngStyle]="{'color': buttonColor}" id="p"  >Perfil</button>
+              <button ion-button name="perfil" color="light" class="btn" (click)="alterarTab('perfil')" (click)="alterar()" (click)="addEvent();" [ngStyle]="{'color': buttonColor}" id="p" style="margin-left: 45px;" >Perfil</button>
             </ion-row>
             <ion-row>
               <button ion-button name="especialidade" color="light" class="btn"  (click)="alterarTab('especialidade')" id="e" (click)="alterar()" (click)="Event2();" [ngStyle]="{'color': buttonColor2}">Especialidade</button>
@@ -194,19 +190,83 @@
     </div>
   <br>
   
-  <div class="pagetabs"  style="margin-top: 16.7rem;" [ngStyle]="{'display': isso}">
-    <h5>{{nome}}</h5>
-    <h6>{{descricao}}</h6>
+  <div class="pagetabs"  style=" background: #a9a9a9; background-image: url(/assets/imgs/mapa.png); margin-top: -16px;position: absolute;width: 100%;height: 45%; background-blend-mode: soft-light;" [ngStyle]="{'display': isso}">
+    <div>
+        <h5 class="nome">{{nome}}</h5>
+        <h6 class="descricao">{{descricao}}</h6>
+        <div style="margin-left: 57px; margin-top: 30px;"><img src="../assets/imgs/bolabaixo.png" alt="" style="width: 70px;"> <h5 class="txtbol">{{trabalhos_concluidos}} SERVIÇOS CONCLUÍDOS</h5>
+        </div>
+        <div style=" position: absolute;"><img src="../assets/imgs/bolacima.png" alt="" style="width: 70px; margin-left: 140px;margin-top: -55px;"> <h5 style=" margin-top: -48px; margin-left: 141px;" class="txtbola" >PERFIL<br>APROVADO</h5>
+        </div>
+        <div style=" position: absolute;"><img src="../assets/imgs/bolacima.png" alt="" style="width: 70px; margin-top: -55px; margin-left: 222px;"> <h5 class="txtbola"style=" margin-top: -48px; margin-left: 224px;">PERFIL<br>APROVADO</h5>
+        </div>
+      </div>
   </div>
   
-    <div class="pagetabs" id="perfil" style="margin-top: 16.7rem;" *ngIf="pageId=='perfil'">
-      <h5>{{nome}}</h5>
-      <h6>{{descricao}}</h6>
+    <div class="pagetabs" id="perfil" style=" background: #a9a9a9; background-image: url(/assets/imgs/mapa.png); margin-top: -16px;position: absolute;width: 100%;height: 45%; background-blend-mode: soft-light;" *ngIf="pageId=='perfil'">
+     
+      <div>
+      <h5 class="nome">{{nome}}</h5>
+      <h6 class="descricao">{{descricao}}</h6>
+      <div style="margin-left: 57px; margin-top: 30px;"><img src="../assets/imgs/bolabaixo.png" alt="" style="width: 70px;"> <h5 class="txtbol">{{trabalhos_concluidos}} SERVIÇOS CONCLUÍDOS</h5>
+      </div>
+      <div style=" position: absolute;"><img src="../assets/imgs/bolacima.png" alt="" style="width: 70px; margin-left: 140px;margin-top: -55px;"> <h5 style=" margin-top: -48px; margin-left: 141px;" class="txtbola" >PERFIL<br>APROVADO</h5>
+      </div>
+      <div style=" position: absolute;"><img src="../assets/imgs/bolacima.png" alt="" style="width: 70px; margin-top: -55px; margin-left: 222px;"> <h5 class="txtbola"style=" margin-top: -48px; margin-left: 224px;">PERFIL<br>APROVADO</h5>
+      </div>
+    </div>
     </div>
   
-    <div class="pagetabs" id="especialidade" style="margin-top: 16.7rem;" *ngIf="pageId == 'especialidade'">
-      
+    <div class="pagetabs" id="especialidade" style="margin-top: 16.7rem;  background: #a9a9a9; background-image: url(/assets/imgs/mapa.png); margin-top: -16px;position: absolute;width: 100%;height: 45%; background-blend-mode: soft-light;" *ngIf="pageId == 'especialidade'">
+      <div>
+          <h5 class="categorias" style="margin-bottom: 10px;">ESPECIALIDADE</h5>
+          <li class="pinposo">MESTRE DE OBRAS</li>
+          <li class="pinposo">ELETRECISTA</li>
+          <li class="pinposo">PINTOR</li>
+          <div class="linha"></div>
+          <h5 class="categorias">SUB-CATEGORIAS</h5>
+          <li class="pinposo">ANALISTA DE PROJETOS</li>
+      </div>
     </div>
+    <div class="pagetabs" id="Concluidos" style=" margin-top: 30px; position: absolute;" *ngIf="pageId == 'Concluidos'">
+      <div>
+          <div>
+            <button class="esquerda" ><img src="../assets/imgs/setaes.png" alt=""></button>
+          <img style=" width: 90px; border-radius: 100%; height: 90px; margin-left: 70px; " src="../assets/imgs/jovi.jpg" alt="">
+          <h4 style="position: absolute; top: -17px; left: 170px; width: 145px; font-size: 15px;">luis carlos</h4>
+          <h6 style="position: absolute; top: 11px; left: 170px; width: 130px; font-weight: 400; color: #6b6b6b;">muito bom o trabalho top mesmo.</h6>
+         
+          <button class="direita"><img src="../assets/imgs/setadi.png" alt=""></button>
+            <div>
+              <img src="../assets/imgs/bolaverd.png" alt="" style="position: absolute; top: 120px; left: 70px; width: 23px;">
+              <h6 style="position: absolute; top: 110px; left: 95px; color: #000; font-weight: 500; font-size: 10px;">RECOMENDAR</h6>
+              <img src="../assets/imgs/bolaverd.png" alt="" style=" position: absolute; left: 170px; top: 120px; width: 23px;">
+              <h6 style=" position: absolute; left: 193px; width: 120px; top: 110px; color: #000; font-weight: 500; font-size: 10px;">CONTRATAR NOVAMENTE</h6>
+            </div>
+          </div>
+      </div>
+    </div>
+    
+    <div class="pagetabs" id="contatar" style="  margin-top: -16px;position: absolute;width: 100%;height: 45%; background-blend-mode: soft-light;" *ngIf="pageId=='contatar'">
+     
+      <div>
+            <h5 style=" margin-left: 26px; font-size: 15px; margin-top: 40px;">CONTATAR</h5>
+              <div style="margin-left: 22px; margin-bottom: 10px;">
+                  <input style="top: 71px; position: absolute;" type="radio" id="huey" name="drone" checked />
+                  <label style="margin-left: 13px; font-size: 11px; font-weight: 500;" for="huey">CONTATAR</label>
+                  <input style="top: 71px; position: absolute;" type="radio" id="dewey" name="drone" />
+                  <label style="margin-left: 14px; font-size: 11px; font-weight: 500;" for="dewey">AUTORIZAR HANGOUT</label>
+              </div>
+              <ion-item>
+              <ion-textarea></ion-textarea>
+              </ion-item>
+              <br>
+              <button ion-buttom class="enviar">ENVIAR</button>
+         
+    </div>
+    </div>
+
+      
     <!-- <div class="pagetabs" id="perfil" style="margin-top: 16.7rem;" >
       <h5>{{nome}}</h5>
       <h6>{{descricao}}</h6>

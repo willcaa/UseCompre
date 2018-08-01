@@ -42,6 +42,7 @@ page-perfil-profissional {
         box-shadow: none;
     }
     
+    
     .icon-button-footer{
         margin-top: 0px !important;
     }
@@ -52,12 +53,110 @@ page-perfil-profissional {
         height: 18px;
         left: -15px;
         color: #fff;
+        font-weight: 100;
+        text-transform: none;
+        font-size: 15px;
+        margin-left: 13px;
+    }
+    .nome{
+        color: #141f40;
+        margin-left: 40px;
+        margin-top: 25px !important;
+        margin-bottom: 0px;
+        font-weight: 600;
+        font-size: 19px;
+    }
+    .txtbol{
+        margin-top: -49px;
+        width: 85px;
+        font-size: 8px;
+        margin-left: -6px;
+        color: #475891;
+        font-weight: 900;
+        text-align: center;
+    }
+    .txtbola{
+        font-size: 8px;
+        color: #475891;
+        font-weight: 900;
+        text-align: center;
+    }
+    .linha{
+        border-bottom: solid 1px;
+        border-color: #141f40;
+        width: 285px;
+        margin-left: 30px;
+        margin-bottom: -10px;
+        margin-top: 20px;
+    }
+    .pinposo{
+        margin-left: 40px;
+        color: #141f40;
+        font-size: 16px;
+        font-weight: 400;
+    }
+    .categorias{
+        color: #141f40;
+        margin-left: 64px;
+        margin-top: 25px !important;
+        margin-bottom: 3px;
+        font-weight: 600;
+        font-size: 18px;
+    }
+    .direita{
+        background: none;
+        width: 32px;
+        position: absolute;
+        top: 38px;
+        left: 310px;
+    }
+    .esquerda{
+        background: none;
+        width: 32px;
+        margin-top: 38px;
+        position: absolute;
+        margin-left: 10px;
+    }
+    .item-md{
+        border: solid 1px;
+        width: 300px;
+        margin-left: 20px;
+        background-color: #d3d3d3;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border-color: #737373;
+    }
+    .descricao{
+        color: #3d3b3b;
+        width: 195px;
+        margin-left: 40px;
+        font-size: 15px;
+        margin-top: 5px;
+        font-weight: 400;
+    }
+    .enviar{
+        background: #000;
+        color: #fff;
+        border-radius: 3px;
+        margin-left: 240px;
+        margin-top: 10px;
+        width: 50px;
+        font-size: 9px;
+        height: 14px;
+        letter-spacing: 1px;
+        font-weight: 500;
     }
     .col{
         width: 100px;
         min-height: 0px;
         height: 18px;
         left: -15px;
+    }
+    page-perfil-profissional #p{
+        margin-bottom: 0px;
+        margin-left: 30px;
     }
     .btn-star{
         background-color: transparent !important;

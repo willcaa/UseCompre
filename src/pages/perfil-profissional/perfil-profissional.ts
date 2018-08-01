@@ -18,6 +18,7 @@ export class PerfilProfissionalPage {
   nome: any;
   pageId: any;
   descricao: any;
+  trabalhos_concluidos: any;
   concluidos: any;
   buttonColor:any;
   buttonColor2:any;
@@ -48,7 +49,7 @@ export class PerfilProfissionalPage {
       id: id
     }
 
-    let link = 'https://bluedropsproducts.com/use/usuarios/getProfissional';
+    let link = 'https://wa-studio.com/use/usuarios/getProfissional';
     
     this.http.post(link, JSON.stringify(body), { headers: headers })
       .map(res => res.json())
@@ -59,6 +60,7 @@ export class PerfilProfissionalPage {
           this.imagemProfissional = data.img;
           this.nome = data.nome;
           this.descricao = data.descricao;
+          this.trabalhos_concluidos = data.trabalhos_concluidos;
           
         }
       });

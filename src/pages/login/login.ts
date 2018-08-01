@@ -72,7 +72,7 @@ export class LoginPage {
       headerx.append('Accept', 'application/json');
       headerx.append('content-type', 'application/json');
       var myData = JSON.stringify({email: email, nome: nome, imagem: imagem});
-      var link = 'https://bluedropsproducts.com/use/usuarios/cadastrar';
+      var link = 'https://wa-studio.com/use/usuarios/cadastrar';
   
       this.http.post(link, myData, { headers: headerx })
         .map(res => res.json())
@@ -143,7 +143,7 @@ export class LoginPage {
       headerx.append('Accept', 'application/json');
       headerx.append('content-type', 'application/json');
       var myData = JSON.stringify({email: email, senha: senha});
-      var link = 'https://bluedropsproducts.com/use/usuarios/login';
+      var link = 'https://wa-studio.com/use/usuarios/login';
   
       this.http.post(link, myData, { headers: headerx })
         .map(res => res.json())
