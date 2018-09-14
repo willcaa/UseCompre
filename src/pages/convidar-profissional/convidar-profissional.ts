@@ -46,6 +46,27 @@ export class ConvidarProfissionalPage {
     this.getWorkers();
   }
 
+  public presentAlert(id){
+    let alert = this.alertCtrl.create({
+      title: "Confirmar",
+      message: "Deseja convidar esse profissional?",
+      buttons: [
+        {
+          text: "Cancelar",
+          role: 'cancel',
+          handler: () => {}
+        },
+        {
+          text: 'OK',
+          handler: () => {
+            this.getWorkerId(id);
+          }
+        }
+      ]
+    });
+    alert.present();
+  }
+
   getWorkers(){
     let headers = new Headers();
     headers.append('Access-Control-Allow-Origin', '*');
@@ -61,8 +82,10 @@ export class ConvidarProfissionalPage {
     this.http.post(link, JSON.stringify(body), { headers: headers })
       .map(res => res.json())
       .subscribe(data => {
-        console.log(data);
-        this.workers = data;
+        if(data){
+          console.log(data);
+          this.workers = data;
+        }
       });
   }
 
@@ -74,8 +97,23 @@ export class ConvidarProfissionalPage {
     this.navCtrl.push(PerfilProfissionalPage, {id: id});
   }
 
+  convidarProfissional(){
+    let headers = new Headers();
+    headers.append('Access-Control-Allow-Origin', '*');
+    headers.append('Accept', 'application/json');
+    headers.append('content-type', 'application/json');
+
+    let body = {
+      id: this.workerId
+    };
+
+    // this.http.post
+  }
+
   getWorkerId(id){
     this.workerId = id;
+    console.log(id);
+    // this.convidarProfissional();
   }
 
   alterarTab(id){
@@ -103,8 +141,8 @@ export class ConvidarProfissionalPage {
         }
       });
   }
-  publicar(categoriaProfissional,subCategoriaProfissional,nomeServico,orcamento,tipoPagamento,disponibilidade){
-   console.log(this.prof.id);
+  publicar(categoriaProfissional, subCategoriaProfissional, nomeServico, orcamento, tipoPagamento, disponibilidade){
+   console.log(this.workerId);
     let headers = new Headers();
     headers.append('Access-Control-Allow-Origin', '*');
     headers.append('Accept', 'application/json');
@@ -117,8 +155,9 @@ export class ConvidarProfissionalPage {
       orcamento : orcamento ,
       tipoPagamento : tipoPagamento,
       disponibilidade : disponibilidade,
-      idTrabalhador : this.prof.id,
+      idTrabalhador : this.workerId,
       idEmissor : this.userId,
+      status: 0,
     }
   
     let link = 'https://wa-studio.com/use/usuarios/publicar';

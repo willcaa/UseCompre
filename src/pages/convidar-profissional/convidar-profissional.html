@@ -55,7 +55,7 @@
           </ion-row>
     
           <ion-label class="concluido" stacked color="grey" style="margin-top: 6px; background-color: transparent;">{{item.trabalhos_concluidos}} concluídos</ion-label>
-          <button ion-button color="light" class="convida" style="width: 74%; color: #96928b; border-color: #141f40; " (click)="getProfissional(item.id);getWorkerId(item.id)">CONVIDAR</button>
+          <button ion-button color="light" class="convida" style="width: 74%; color: #96928b; border-color: #141f40; " (click)="presentAlert(item.id)">CONVIDAR</button>
       </ion-col>
   
     </ion-row>
